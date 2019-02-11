@@ -21,7 +21,7 @@ ifeq ($(ABI),WINDOWS64)
     FEXT=.exe
     SHREXT=.dll
     STAEXT=.a
-    OMDEVMSYS=$(shell cygpath $$OMDEV)
+    OMDEVMSYS=$(shell cygpath $$OMDEV/tools/msys)
     CMAKE = $(OMDEVMSYS)/bin/cmake/bin/cmake
     CMAKE_TARGET=-G "MSYS Makefiles"
     INSTALL_DIR = install/mingw
@@ -44,7 +44,7 @@ else ifeq ($(ABI),WINDOWS32)
     FEXT=.exe
     SHREXT=.dll
     STAEXT=.a
-    OMDEVMSYS=$(shell cygpath $$OMDEV)
+    OMDEVMSYS=$(shell cygpath $$OMDEV/tools/msys)
     CMAKE = $(OMDEVMSYS)/bin/cmake/bin/cmake
     CMAKE_TARGET=-G "MSYS Makefiles"
     INSTALL_DIR = install/mingw
